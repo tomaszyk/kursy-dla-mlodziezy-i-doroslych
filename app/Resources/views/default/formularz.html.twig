@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<center>
+    <!-- Formularz -->
+    <div class = "row">
+        <div class = "col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+        <div class = "col-lg-8 col-md-8 col-sm-10 col-xs-10">
+            {{form_start(form, {'attr' : {'novalidate' : 'novalidate'}})}}
+            <h4>Dane Kursanta</h4>
+            <div>
+                {{form_row(form.nazwa_kursanta)}}
+                {{form_row(form.dataUrodzeniaKursanta)}}
+            </div>
+            <h4>Dane Osoby wysyłającej zgłoszenie</h4>
+            <div>
+                {{form_end(form)}}
+            </div>
+        
+        </div>
+            <div class = "col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+    </div>
+    <br>
+</center>
+
+<div class = "col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+<div class = "col-lg-8 col-md-8 col-sm-10 col-xs-10">
+<p>
+    <a href = "{{path('regulamin')}}" target="_blank">Regulamin</a><br>
+    <a href = "https://docs.google.com/document/d/195UKXlCT866_bpPCMbkDYYONnr71odK_bKud_-v3M9E/edit" target="_blank">Polityka prywatności</a>
+</p>
+</div>
+<div class = "col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+{% endblock %}

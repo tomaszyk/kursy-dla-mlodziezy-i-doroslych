@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" http-equiv="Content-Type">
+        <title>{% block title %}Kursy dla młodzieży i dorosłych - EDU Szkoła Szybkiego czytania i technik pamięciowych w Poznaniu{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('style/style.css')}}">
+    </head>
+
+    <body>
+         
+        
+    <div class = "row">
+        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+        <div class = "col-lg-10 col-md-10 col-sm-10 col-xs-10">
+            <div id = "pusty"></div>
+        </div>
+        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+
+        
+    <div class = "row">
+        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+        <div class = "col-lg-10 col-md-10 col-sm-10 col-xs-10">
+
+            <nav  class="navbar navbar-default navbar-fixed-top">
+                <div class = "navbar-header" id = "collapse2">
+                    <button type="button" class="navbar-toggle collaped" data-toggle="collapse" data-target="#collapse" id = "collapse1">
+                        <span class = "sr-only">Nawigacja</span>
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                    </button>
+                </div>
+
+
+                <div class="collapse navbar-collapse" id="collapse">
+                    <ul class = "nav-justified">
+                        <li role="presentation"><a href="{{path('homepage')}}"><img src = "{{asset('image/edu logo.png')}}" wigdh = 50 height = 30></a></li>
+                        <li role="presentation"><a href="{{path('homepage')}}">Kursy</a></li>
+                        <li role="presentation"><a href="{{path('dowodySkutecznosci')}}">Skuteczność</a></li>
+                        <li role="presentation"><a href="{{path('dysleksja')}}">Dysleksja</a></li>
+                        <li role="presentation"><a href="{{path('faq')}}">FAQ</a></li>
+                        <li role="presentation"><a href="{{path('kontakt')}}">Kontakt</a></li>
+            
+                        </ul>
+                </div>
+            </nav>
+
+        </div>
+        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
+
+    <div class = "row"> 
+        <div id = "alert" class = "alert alert-info navbar-fixed-bottom" style = "background-color: black; opacity: 0.8;" >
+                <p style = "color: white; text-align: center;">Nasza strona internetowa używa plików cookies (tzw. ciasteczka) dla lepszego funkcjonowania. Jeśli nie blokujesz tych plików, to zgadzasz się na ich użycie oraz zapisanie w pamięci urządzenia. Pamiętaj, że możesz samodzielnie zarządzać cookies, zmieniając ustawienia przeglądarki. Jeśli chcesz wiedzieć więcej, zapoznaj się z naszą <a href = "https://docs.google.com/document/d/195UKXlCT866_bpPCMbkDYYONnr71odK_bKud_-v3M9E/edit" target="_blank">Polityką prywatności</a> .</p>
+                    <center><button id = "button" class = "btn btn-primary">Rozumiem</button></center>
+        </div>
+    </div>
+
+    <div class = "row">
+        <div class = "col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+        <div class = "col-lg-8 col-md-8 col-sm-10 col-xs-10">{% block body %}{% endblock %}</div>
+        <div class = "col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+    </div>
+                
+    <hr>
+
+
+    <div class="center-block">
+        <div class = "container">
+            <footer class = "row">
+                <center><p><small>Copyright 2018 &copy; EDU Szkoła szybkiego czytania i technik pamięciowych w Poznaniu.</small></p></center>
+            </footer>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
+            
+    <script>
+    function displayCookie()
+            {
+                $('#button').click(
+                    function(){
+                        $('#alert').detach();
+                        document.cookie = "cookie = cookie jest ustawione";
+                                })}
+                
+    function hideCookie()
+            {
+                var cookieValue = document.cookie.indexOf('cookie jest ustawione');
+                   
+                if(cookieValue != -1)
+                    {
+                        $('#alert').hide();
+                    }}
+                
+
+    $(document).ready(
+                    function(){
+                       displayCookie();
+                       hideCookie();
+                    }
+                );
+                
+            </script>
+       
+
+        
+        {% block script %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{% block stylesheets %}
+   <script src='https://www.google.com/recaptcha/api.js'></script>
+{% endblock %}
+<center>
+    <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <h3>SKONTAKTUJ SIĘ Z NAMI</h3>
+<p>W przypadku pytań skontaktuj się z nami poprzez formularz kontaktowy lub napisz do nas na adres <b>poznan@akademiaedukacji.pl</b>.<br>
+    Jesteśmy także dostępni pod telefonem <b>787 620 114</b></p>
+    </div>
+    <div class = "col-lg-5 col-md-5 col-sm-5 col-xs-5">
+        <div style = "">
+            <h3>NAPISZ DO NAS</h3>
+
+            {{form_start(form, {'attr' : {'novalidate' : 'novalidate'}})}}
+
+            {{form_row(form.imie)}}
+            {{form_row(form.email)}}
+            {{form_row(form.wiadomosc)}}
+            {{form_row(form.zgoda)}}
+            <span style = "color:red">{{recaptcha}}</span>
+            <div class="g-recaptcha" data-sitekey="6Lc_54kUAAAAANzQRMmdJniFa7lUvSLRXbNgeLdz"></div>
+            {{form_end(form)}}
+        </div>
+    </div>
+    <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+
+      <!-- {{form_start(form, {'attr' : {'novalidate' : 'novalidate'}})}}
+
+        <div style = "">
+            {{form_row(form.imie)}}
+            {{form_row(form.email)}}
+            {{form_row(form.wiadomosc)}}
+            <span style = "color:red">{{recaptcha}}</span>
+            <div class="g-recaptcha" data-sitekey="6Le_rnQUAAAAAIJ2f1NPJvTq20kgDQNZ_ON0nYGS"></div>
+            {{form_end(form)}}
+        </div> -->
+
+
+<!--{{form(form)}}-->
+
+</center>
+
+{% endblock %}

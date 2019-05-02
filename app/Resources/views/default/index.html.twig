@@ -1,0 +1,162 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class = "row">
+    <center>
+
+    <div>
+					<span><h3><strong>KURS Z GWARANCJĄ EFEKTÓW</strong></h3></span><br>
+        <i><p class="text-center" id = "gwarancja">Czytasz co najmniej trzykrotnie szybciej zachowując lub podnosząc zrozumienie albo<br><strong> zwrócimy Ci pieniądze.</strong></p></i>
+        <br>
+<img src="{{asset('image/gwarancja.png')}}" width ="200" height="180"><br><br>
+
+
+<p id = "szczegoły_gwarancji">
+<span class = "glyphicon glyphicon-ok kurs"></span> Wzrost tempa czytania <span class = "procent">300% - 500%</span><br>
+<span class = "glyphicon glyphicon-ok kurs"></span> Wzrost skuteczności zapamiętywania <span class = "procent">300%</span><br>
+<span class = "glyphicon glyphicon-ok kurs"></span> Wzrost koncentracji <span class = "procent">100%</span><br>
+Skuteczność metod potwierdzona przez: dra Marka Sikorskiego i prof. dra hab. Andrzeja Makowskiego z Akademii Morskiej w Gdyni oraz prof. dra hab. Bohdana Wojcisze ze Szkoły Głównej Psychologii Społecznej w Warszawie.<br>
+<br>
+	<span><h4><strong>INTENSYWNY KURS SZYBKIEGO CZYTANIA I TECHNIK PAMIĘCIOWYCH</strong></h4></span>
+      </div>
+    </center>
+</div>
+<hr />
+
+
+<br>
+
+<img src = "{{asset('image/mozg.jpg')}}" class = "img-thumbnail" width = 300 height = 300 style = "float:left; margin-right:20px;">
+
+
+    <p>Każdy z nas posiada wewnętrzne pragnienie rozwoju, zdobywania wiedzy</p>
+
+    <p>Pojemność ludzkiej pamięci jest przeogromna, podaje się w różnych źródłach, że przeciętny człowiek jest w stanie przyswoić w całości program trzech wyższych uczelni oraz opanować kilkanaście języków obcych...</p>
+<br><br><br>
+
+<img src = "{{asset('image/grupa.jpg')}}" class = "img-thumbnail" width = 300 height = 300 style = "float:right; margin-left:20px;"><br>
+    <p>Dlaczego więc tak olbrzymią trudność sprawia nam nauka?</p>
+
+    <p>Dlaczego zdobywanie wiedzy jest tak mozolnym i czasochłonnym procesem?</p>
+    <p>Odpowiedź jest prosta, nie wiemy jak to robić!!!</p>
+
+<p class = "szyld">Nasz kurs da Ci praktyczne umiejętności, dzięki którym kilkakrotnie zwiększysz tempo czytania i efektywność przyswajania nowych informacji.</p>
+
+<hr />
+<h4>O kursie</h4>
+<hr />
+<p class = "szyld"><span class = "glyphicon glyphicon-ok"></span> Zwiększysz tempo czytania od 3 do 5 razy, zachowując lub podnosząc zrozumienie czytanego tekstu.</p>
+<p class = "szyld"><span class = "glyphicon glyphicon-ok"></span> Poznasz pięć technik pamięciowych i zrozumiesz zasady rządzące pamięcią, dowiesz się co należy zrobić i jak używać pamięci aby informacje z niej nie uciekały.</p>
+<p class = "szyld"><span class = "glyphicon glyphicon-ok"></span> Poznasz efektywny i szybki sposób notowania, co sprawi, że czas nauki z takich notatek znacząco się skróci</p>
+<p class = "szyld"><span class = "glyphicon glyphicon-ok"></span> Dzięki specjalnym ćwiczeniom wzrośnie Twoja koncentracja.</p><br>
+<p>Nowopoznane narzędzia umożliwiają pracę z informacją w zupełnie inny sposób, dużo efektywniejszy, poznasz go na kursie.</p>
+<p>Ponadto wszystkie te metody wypróbujesz w praktyce jeszcze na kursie na własnych materiałach pod okiem trenera (przeznaczamy na to sporo czasu). </p>
+<br>
+<center>
+    <a href="{{path('programKursu')}}" class = "color">Program kursu</a>
+    <br><br><br>
+<p class = "kurs">REFERENCJE</p><br>
+<p>Z naszych usług z powodzeniem skorzystało wiele firm,<br>np: Grupa Lotos, Allianz Polska, TVN 24,<br>
+<a href="http://akademiaedukacji.pl/edu/rekomendacje">Zobacz referencje</a><br><br>
+<p class = "kurs">BADANIA NAUKOWE</p><br>
+
+    <p>A skuteczność naszych metod została potwierdzona<br> <a href="{{path('dowodySkutecznosci')}}">badaniami naukowymi.</a><br><br>Zdajemy sobie sprawę z faktu, że takie umiejętności, choć bardzo użyteczne mogą budzić wiele wątpliwości, jednak ponad 2 tys. zadowolonych absolwentów w całej Polsce pozwala nam dać Bezwarunkową Gwarancję Satysfakcji na nasze usługi:</p>
+
+
+
+<img src="{{asset('image/gwarancja.png')}}" width ="200" height="180"><br><br>
+</center>
+<div><p id = "opis"><i>Jeżeli w trakcie trwania kursu stosując się do zaleceń trenera nie uzyskasz co najmniej trzykrotnego zwiększenia tempa czytania z zachowaniem lub podniesieniem poziomu zrozumienia czytanego tekstu zwrócimy Ci Twoje pieniądze.<br><br><b>Nam płacisz za wynik!!!</b></i></p></div>
+
+
+<hr />
+
+
+
+<p id = "opis1">
+<b>Dowiedz się więcej o naszych kursach:</b><br><br>
+</p>
+
+<div class = "odstep"><p class = "center"><span class = "glyphicon glyphicon-info-sign"></span><br>Liczba spotkań</p>
+<p class = "center1">10</p></div><br>
+<div class = "odstep"><p class = "center"><span class = "glyphicon glyphicon-calendar"></span><br>Początek i koniec kursu</p>
+<p class = "center1">{{termin.poczatek}} - {{termin.koniec}}</p></div><br>
+<div class = "odstep"><p class = "center"><span class = "glyphicon glyphicon-time"></span><br>Dzień, godzina i czas zajęć</p>
+<p class = "center1">{{termin.dzien}} g. {{termin.godzina}} (90 minut)</p></div><br>
+<div class = "odstep"><p class = "center"><span class = "glyphicon glyphicon-map-marker"></span><br>Lokalizacja</p>
+<p class = "center1">{{termin.lokalizacja}}</p></div><br>
+<div class = "odstep"><p class = "center"><span class = "glyphicon glyphicon-user"></span><br>Wielkość grupy</p>
+<p class = "center1">8 osób</p></div><br>
+<div class = "odstep"><p class = "center"><span class = "glyphicon glyphicon-fire"></span><br>Liczba wolnych miejsc</p>
+<p class = "center1">{{8 - liczbaKursantow}}</p></div><br>
+
+<div class = "odstep"><p class = "center"><span class = "glyphicon glyphicon-piggy-bank"></span><br>Cena podstawowa kursu</p>
+<p class = "center1">920 zł</p></div><br>
+<div class = "odstep"><p class = "center"><span class = "glyphicon glyphicon-bullhorn"></span><br><span style = "color:red">Dołącz do grupy w promocyjnej cenie</span></p>
+<p class = "center1">{{cena.cena + cena.rezerwacja}} zł*</p></div><br>
+<div class = "odstep"><p class = "center"><span class = "glyphicon glyphicon-hand-down"></span><br>Promocja obowiązuje przy zapisie do:</p>
+<p class = "center1">{{pokazDate}}</p></div><br>
+<div class = "odstep"><p class = "center"><span class = "glyphicon glyphicon-pushpin"></span><br>Opłata za kurs w promocji</p>
+<p class = "center1">*2 opcje płatności:<br>
+
+            <span>2 części: {{cena.rezerwacja}} zł (opłata rezerwacyjna, płatne w momencie zapisu) + {{cena.cena}} zł (płatne do drugich zajęć), łącznie {{cena.cena + cena.rezerwacja}} zł*</span><br>
+
+
+            <span>3 części: {{cena.rezerwacja}} zł (opłata rezerwacyjna, płatne w momencie zapisu) + {{cena.rata1}} zł (płatne do drugich zajęć) i {{cena.rata2}} zł (płatne do piątych zajęć), łącznie {{cena.cenaCal}} zł</span>
+
+
+</p></div><br>
+
+<!-- <b>START KURSU: </b> {{termin.poczatek}}, godz.{{termin.godzina}} (czas spotkania ok. 1.5 h)<br><br>
+<b>KONIEC KURSU: </b> {{termin.koniec}}<br><br>
+<b>Dzień w jaki odbywają się zajęcia (10 spotkań): </b>{{termin.dzien}}.<br><br>
+<b>Miejsce zajęć: </b>{{termin.lokalizacja}}<br><br>
+    <b>Liczba wolnych miejsc: </b> {{8 - liczbaKursantow}}<br><br>
+
+
+    <b>Cena podstawowa: </b>Cena podstawowa: 920zł<br><br>
+    <b style = "color:red;">PROMOCJA CENOWA!!!<br><br>
+Przy zapisie na kurs do {{pokazDate}}, cena wynosi {{cena.cena + cena.rezerwacja}} zł* </b> <br><br>
+
+</p>
+
+<p> *Opłaty za kurs dokonuje się w jednej z dwóch opcji: <br><br>a) {{cena.rezerwacja}} zł (opłata rezerwacyjna, płatne w momencie zapisu) + {{cena.cena}}zł (płatne do drugich zajęć).<br> b) {{cena.rezerwacja}} zł (opłata rezerwacyjna, płatne w momencie zapisu) + {{cena.rata1}}zł (płatne do drugich zajęć) i {{cena.rata2}}zł (płatne do piątych zajęć), wówczas cena kursu to {{cena.cenaCal}} zł.</p>
+-->
+<br>
+<center>
+
+</center>
+<br><br>
+<p class = "kurs center">Zapisy na kurs:</p>
+<center>
+<p>Aby zarezerwować miejsce na kursie: po zapoznaniu się z <a href="{{path('regulamin')}}">Regulaminem</a> oraz <a href = "https://docs.google.com/document/d/195UKXlCT866_bpPCMbkDYYONnr71odK_bKud_-v3M9E/edit">Polityką prywatności</a> prosimy o wypełnienie formularza rejestracyjnego oraz uregulowanie opłaty rezerwacyjnej 90 zł (wliczanej na poczet ceny kursu).</p>
+</center>
+<hr />
+<img src = "{{asset('image/sukces.jpg')}}" width ="375" height="250" id = "zdjecie">
+<br><br><br><br><br>
+<p id = "tekst">Daj sobie szansę wykorzystania swoich wrodzonych możliwości, nie marnuj największego daru jaki dostałeś. Zapisz się już dziś!</p><br><br><br><br><br><br>
+
+    <center><h4><b></b></h4></center></p>
+<hr />
+<br>
+<center>
+<a href="{{path('formularz')}}" class="color" role="button">Zapisuję się na kurs</a>
+</center>
+<br>
+
+
+<center>
+	<div>
+			<h4>Miejsce: {{termin.lokalizacja}}</h4>
+		</div>
+
+	<center>
+			<div class="widget-content"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.0687526369734!2d16.92391521547445!3d52.405430152466494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47045b39bf031e11%3A0x99d4594497964023!2sRatajczaka+26%2F3%2C+61-815+Pozna%C5%84!5e0!3m2!1spl!2spl!4v1536856998332" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+        </center>
+
+<br><br>
+                    <center>
+<a href="{{path('formularz')}}" class="color" role="button">Zapisuję się na kurs</a>
+</center>
+<br>
+{% endblock %}
