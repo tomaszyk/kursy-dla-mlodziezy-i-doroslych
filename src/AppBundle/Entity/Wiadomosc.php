@@ -54,7 +54,6 @@ class Wiadomosc
      */
     private $zgoda;
 
-
     /**
      * Get id
      *
@@ -161,4 +160,3 @@ class Wiadomosc
         return $this->zgoda;
     }
 }
-

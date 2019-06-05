@@ -70,7 +70,7 @@ class Daty
      */
     private $trzeciD;
 
-     /**
+    /**
      * @var int
      *
      * @ORM\Column(name="TrzeciM", type="integer")
@@ -83,7 +83,6 @@ class Daty
      * @ORM\Column(name="TrzeciR", type="integer")
      */
     private $trzeciR;
-
 
     /**
      * Get id
@@ -311,4 +310,3 @@ class Daty
         return $this->trzeciR;
     }
 }
-

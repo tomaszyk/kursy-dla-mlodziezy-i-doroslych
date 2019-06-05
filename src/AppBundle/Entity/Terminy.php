@@ -41,29 +41,27 @@ class Terminy
      * @ORM\Column(name="koniec", type="string", length=255)
      */
     private $koniec;
-    
+
     /**
      * @var string
      *
      * @ORM\Column(name="lokalizacja", type="string", length=255)
      */
     private $lokalizacja;
-    
+
     /**
      * @var string
      *
      * @ORM\Column(name="dzien", type="string", length=255)
      */
     private $dzien;
-    
+
     /**
      * @var string
      *
      * @ORM\Column(name="trener", type="string", length=255)
      */
     private $trener;
-    
-
 
     /**
      * Get id
@@ -146,8 +144,7 @@ class Terminy
     {
         return $this->koniec;
     }
-    
-    
+
     /**
      * Setlokalizacja
      *
@@ -170,9 +167,9 @@ class Terminy
     public function getLokalizacja()
     {
         return $this->lokalizacja;
-}
-    
-     /**
+    }
+
+    /**
      * Setdzien
      *
      * @param string dzien
@@ -194,9 +191,9 @@ class Terminy
     public function getDzien()
     {
         return $this->dzien;
-}
-    
-     /**
+    }
+
+    /**
      * Settrener
      *
      * @param string trener
@@ -218,6 +215,5 @@ class Terminy
     public function getTrener()
     {
         return $this->trener;
+    }
 }
-}
-

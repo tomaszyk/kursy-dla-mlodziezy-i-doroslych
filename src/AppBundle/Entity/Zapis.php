@@ -22,7 +22,7 @@ class Zapis
      */
     private $id;
 
-      /**
+    /**
      * @var string
      *
      * @ORM\Column(name="nazwa_kursanta", type="string", length=255)
@@ -53,10 +53,9 @@ class Zapis
      * @var string
      *
      * @ORM\Column(name="z24_id_sprzedawcy", type="string", length=255)
-     * 
+     *
      */
     private $z24IdSprzedawcy;
-
 
     //  /**
     //  * @var string
@@ -199,7 +198,7 @@ class Zapis
      */
     private $dataUrodzenia;
 
-     /**
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="dataUrodzeniaKursanta", type="date")
@@ -216,14 +215,13 @@ class Zapis
      */
     private $uwagi;
 
-     /**
+    /**
      * @var array
      *
      * @ORM\Column(name="regulamin", type="array")
      * @Assert\NotBlank(message = "Musisz zaznaczyć to pole")
      */
     private $regulamin;
-
 
     /**
      * Get id
@@ -235,7 +233,7 @@ class Zapis
         return $this->id;
     }
 
-      /**
+    /**
      * Set nazwa_kursanta
      *
      * @param string $nazwa_kursanta
@@ -643,7 +641,6 @@ class Zapis
         return $this->regulamin;
     }
 
-
     //  /**
     //  * Set etykieta
     //  *
@@ -667,6 +664,5 @@ class Zapis
     // {
     //     return $this->etykieta;
     // }
-
 
 }

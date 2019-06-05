@@ -48,14 +48,13 @@ class Ceny
      * @ORM\Column(name="rezerwacja", type="integer")
      */
     private $rezerwacja;
-    
+
     /**
      * @var int
      *
      * @ORM\Column(name="cenaCal", type="integer")
      */
     private $cenaCal;
-
 
     /**
      * Get id
@@ -162,8 +161,7 @@ class Ceny
     {
         return $this->rezerwacja;
     }
-    
-    
+
     /**
      * Set cenaCal
      *
@@ -188,4 +186,3 @@ class Ceny
         return $this->cenaCal;
     }
 }
-
